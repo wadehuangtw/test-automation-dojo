@@ -14,6 +14,8 @@
 
 而這三個步驟就是對應一個測試案例必備的要素： Input>執行受測程式>Output
 
+![3A 寫法範例](https://github.com/WadeHuang1993/test-automation-dojo/blob/main/articles/images/3a-principle-example.png)
+
 ## 這麼做的優點是？
 當所有的測試案例都按照 3A 原則撰寫時，可以大幅提升測試案例的可讀性。
 測試案例會變得像原始碼的文件，可以讓開發人員知道輸入輸出是什麼。
