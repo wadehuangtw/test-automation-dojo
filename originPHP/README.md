@@ -1,11 +1,12 @@
 # 使用原生 PHP 撰寫測試案例
 
-這裡將會帶大家從無到在原生的 PHP 環境中執行測試案例。
+這裡將會帶大家從無到有 **在原生的 PHP 環境中執行測試案例**。
 
-在 originPHP 底下總共有兩個目錄，分別為 `Src` 和 `Tests`。
-
-前置作業：
+### 前置作業：
 1. 在你的電腦安裝 Git、Composer
+
+## originPHP 目錄說明
+在 originPHP 底下總共有兩個目錄，分別為 `Src` 和 `Tests`。
 
 ### Src 目錄
 
@@ -18,12 +19,12 @@
 
 ### Tests 目錄
 
-裡面包含 CollectionTest.php，專門用來測試 Collection.php 的所有方法。
+裡面包含 CollectionTest.php，專門用來 **測試 Collection.php 的所有方法**。
 
-在這個測試案例中，請大家一律採用 3A 原則來設計你的測試案例。
+在這個測試案例中，請大家 **一律採用 3A 原則來設計你的測試案例**。
 
 我有準備一個 testAll() 來示範 3A 原則的寫法。
-但是 testAll() 目前是紅燈（未通過測試），請大家練習根據 Colletable 介面的定義實作 Collection.php 的 all() 方法，讓 testAll() 可以通過測試。
+但是 testAll() 目前是紅燈（未通過測試），請大家練習根據 Collectable 介面的定義實作 Collection.php 的 all() 方法，讓 testAll() 可以通過測試。
 
 當你完成 testAll() 之後，請依樣畫葫蘆完成 Collection.php 的所有測試案例。
 
