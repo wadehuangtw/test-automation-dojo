@@ -24,7 +24,7 @@ class Collection implements Collectable
      */
     public function all()
     {
-        // TODO: Implement all() method.
+        return $this->parameters;
     }
 
     /**
@@ -36,7 +36,7 @@ class Collection implements Collectable
      */
     public function keys()
     {
-        // TODO: Implement keys() method.
+        return array_keys($this->parameters);
     }
 
     /**
@@ -46,7 +46,7 @@ class Collection implements Collectable
      */
     public function replace(array $parameters = [])
     {
-        // TODO: Implement replace() method.
+        return array_merge($this->parameters, $parameters);
     }
 
     /**
@@ -58,7 +58,7 @@ class Collection implements Collectable
      */
     public function add(array $parameters = [])
     {
-        // TODO: Implement add() method.
+        return array_replace($this->parameters, $parameters);
     }
 
     /**
@@ -73,7 +73,7 @@ class Collection implements Collectable
      */
     public function get(string $key, $default = null)
     {
-        // TODO: Implement get() method.
+        return $this->parameters[$key] ?? $default;
     }
 
     /**
@@ -85,7 +85,7 @@ class Collection implements Collectable
      */
     public function set(string $key, $value)
     {
-        // TODO: Implement set() method.
+        $this->parameters[$key] = $value;
     }
 
     /**
@@ -97,7 +97,7 @@ class Collection implements Collectable
      */
     public function has(string $key)
     {
-        // TODO: Implement has() method.
+        return isset($this->parameters[$key]);
     }
 
     /**
@@ -107,7 +107,9 @@ class Collection implements Collectable
      */
     public function remove(string $key)
     {
-        // TODO: Implement remove() method.
+        if ($this->has($key)) {
+            unset($this->parameters[$key]);
+        }
     }
 
     /**
@@ -120,7 +122,10 @@ class Collection implements Collectable
      */
     public function where(string $key, $condition)
     {
-        // TODO: Implement where() method.
+        $parameters = array_filter($this->parameters, function ($item) use ($key, $condition) {
+            return isset($item[$key]) && $item[$key] == $condition;
+        });
+        return (new self($parameters));
     }
 
     /**
@@ -130,6 +135,6 @@ class Collection implements Collectable
      */
     public function count()
     {
-        // TODO: Implement count() method.
+        return count($this->parameters);
     }
 }
