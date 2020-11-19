@@ -50,15 +50,20 @@ class Collection implements Collectable
     }
 
     /**
-     * 將陣列附加在集合中
+     * 返回符合查詢條件的內容物
      *
-     * （提示：array_replace）
+     * 效果類似 SQL 的 WHERE
      *
-     * Adds parameters.
+     * WHERE {$key} = {$condition}
+     *
+     * @param string $key 指定的索引
+     * @param string|int $condition 查詢條件
+     *
+     * @return mixed
      */
-    public function add(array $parameters = [])
+    public function where(string $key, $condition)
     {
-        // TODO: Implement add() method.
+        // TODO: Implement where() method.
     }
 
     /**
